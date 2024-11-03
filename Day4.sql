@@ -28,4 +28,5 @@ SELECT E.FIRST_NAME, J.JOB_TITLE, D.DEPARTMENT_NAME, L.CITY, C.COUNTRY_NAME FROM
                                                                                              INNER JOIN COUNTRIES C ON C.COUNTRY_ID = L.COUNTRY_ID
 WHERE COUNTRY_NAME = 'United States of America';
 
+SELECT COUNTRY_ID, COUNT(*) FROM LOCATIONS GROUP BY COUNTRY_ID;
 
