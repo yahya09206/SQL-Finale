@@ -16,3 +16,10 @@ INNER JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID;
 SELECT E.FIRST_NAME, J.JOB_TITLE, D.DEPARTMENT_NAME, L.CITY FROM EMPLOYEES E INNER JOIN JOBS J ON E.JOB_ID = J.JOB_ID
                                                                      INNER JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
 INNER JOIN LOCATIONS L ON L.LOCATION_ID = D.LOCATION_ID;
+
+SELECT E.FIRST_NAME, J.JOB_TITLE, D.DEPARTMENT_NAME, L.CITY, C.COUNTRY_NAME FROM EMPLOYEES E INNER JOIN JOBS J ON E.JOB_ID = J.JOB_ID
+                                                                             INNER JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+                                                                             INNER JOIN LOCATIONS L ON L.LOCATION_ID = D.LOCATION_ID
+                                                                             INNER JOIN COUNTRIES C ON C.COUNTRY_ID = L.COUNTRY_ID;
+
+
