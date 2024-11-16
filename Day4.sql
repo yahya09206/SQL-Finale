@@ -16,6 +16,15 @@ SELECT FIRST_NAME, JOB_TITLE, DEPARTMENT_NAME, CITY FROM EMPLOYEES e
     INNER JOIN DEPARTMENTS d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
     INNER JOIN LOCATIONS l ON l.LOCATION_ID = d.LOCATION_ID;
 
+SELECT FIRST_NAME, JOB_TITLE, DEPARTMENT_NAME, CITY, c.COUNTRY_NAME, r.REGION_NAME FROM EMPLOYEES e
+                                                             INNER JOIN JOBS j ON e.JOB_ID = j.JOB_ID
+                                                             INNER JOIN DEPARTMENTS d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
+                                                             INNER JOIN LOCATIONS l ON l.LOCATION_ID = d.LOCATION_ID
+                                                             INNER JOIN COUNTRIES c ON l.COUNTRY_ID = c.COUNTRY_ID
+                                                             INNER JOIN REGIONS r ON r.REGION_ID = c.REGION_ID
+WHERE REGION_NAME = 'Europe';
+
+
 
 
 
